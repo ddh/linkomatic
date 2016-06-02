@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
 gem 'haml-rails'
+gem 'bootstrap-sass'
+gem 'acts_as_votable'
+gem 'simple_form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -38,6 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'better_errors'
 end
 
 group :development do
