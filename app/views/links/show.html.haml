@@ -3,7 +3,10 @@
     %a{:href => @link.url}= @link.title
     %br/
     %small
-      Submitted by #{@link.user.name}
+      Submitted
+      %strong
+        = time_ago_in_words(@link.created_at)
+      ago by #{@link.user.name}
 .btn-group
   = link_to 'Visit URL', @link.url, class: "btn btn-primary"
 .btn-group.pull-right
@@ -18,7 +21,7 @@
 - if @link.user == current_user
   .btn-group
     = link_to 'Edit', edit_link_path(@link), class: "btn btn-default"
-    = link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"
+    = link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"
 %h3.comments_title
   = @link.comments.count
   Comments
