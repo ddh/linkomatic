@@ -18,7 +18,7 @@
     %span.glyphicon.glyphicon-chevron-down
     Downvote
     = @link.get_downvotes.size
-- if @link.user == current_user
+- if can? :manage, Link or current_user==@link.user
   .btn-group
     = link_to 'Edit', edit_link_path(@link), class: "btn btn-default"
     = link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"

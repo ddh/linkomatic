@@ -19,6 +19,8 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'acts_as_votable'
 gem 'simple_form'
+# https://github.com/ryanb/cancan/wiki/Role-Based-Authorization
+gem 'cancan' # Roles and authorizations
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
