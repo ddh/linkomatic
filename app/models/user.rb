@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 #   https://github.com/ryanb/cancan/wiki/Role-Based-Authorization
   ROLES = %w[admin moderator user banned].freeze
 
+  def admin?
+    role = 'admin'
+  end
+
 end
